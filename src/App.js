@@ -1,32 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { useForm } from 'react-hook-form';
 import randomColor from 'randomcolor';
 
 function App() {
-  const randomP = randomColor();
+  const [textColor, setTextColor] = React.useState('#FFFFFF');
+  const { register, handleSubmit } = useForm();
 
-  const mystyle = {
-    color: `${randomP}`,
-    padding: '10px',
-    fontFamily: 'Arial',
+  const onSubmit = (data) => {
+    console.log(data);
+    setTextColor(randomColor(data));
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={mystyle}>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="flexbox">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <label className="item">Enter a hue</label>
+            <input className="item" ref={register} name="hue" />
+
+            <label className="item">Enter a lightness</label>
+            <input className="item" ref={register} name="luminosity" />
+            <button className="button item">Submit Color</button>
+          </form>
+        </div>
+        <p style={{ color: textColor }}>THIS IS YOUR RANDOM COLOR!!!!!</p>
       </header>
     </div>
   );
