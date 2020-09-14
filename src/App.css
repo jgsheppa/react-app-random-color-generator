@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -40,11 +40,14 @@
   margin: 24px;
   padding: 16px;
   font-size: 24px;
+  font-weight: bold;
   border-radius: 8px;
 }
 
 .button {
-  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafab3;
   font-size: 24px;
   font-weight: bold;
   border-color: turquoise;
@@ -64,4 +67,9 @@
 .randomColorText {
   font-size: 80px;
   font-weight: bold;
+}
+
+.background-box {
+  background-color: #40e0d0;
+  border-radius: 8px;
 }

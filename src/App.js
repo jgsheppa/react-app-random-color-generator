@@ -16,14 +16,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="flexbox">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <label className="item">Enter a hue</label>
-            <input className="item" ref={register} name="hue" />
+          <div className="background-box">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <label className="item">Enter a primary color</label>
+              <input className="item" ref={register} name="hue" />
 
-            <label className="item">Enter a lightness</label>
-            <input className="item" ref={register} name="luminosity" />
-            <button className="button item">Submit Color</button>
-          </form>
+              <label className="item">Enter a shade (e.g. light, dark)</label>
+              <input className="item" ref={register} name="luminosity" />
+              <button className="button item">Submit Color</button>
+            </form>
+          </div>
         </div>
         <p className="randomColorText" style={{ color: textColor }}>
           THIS IS YOUR RANDOM COLOR!!!!!
