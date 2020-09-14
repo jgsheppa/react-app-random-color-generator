@@ -60,3 +60,8 @@
     transform: rotate(360deg);
   }
 }
+
+.randomColorText {
+  font-size: 80px;
+  font-weight: bold;
+}

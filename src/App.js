@@ -25,7 +25,9 @@ function App() {
             <button className="button item">Submit Color</button>
           </form>
         </div>
-        <p style={{ color: textColor }}>THIS IS YOUR RANDOM COLOR!!!!!</p>
+        <p className="randomColorText" style={{ color: textColor }}>
+          THIS IS YOUR RANDOM COLOR!!!!!
+        </p>
       </header>
     </div>
   );
