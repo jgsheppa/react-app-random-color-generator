@@ -34,11 +34,11 @@ function App() {
               <input className="itemInput" ref={register} name="luminosity" />
             </div>
             <div className="container">
-              <label className="item">Enter a width</label>
+              <label className="item">Enter a width (em)</label>
               <input className="itemInput" ref={register} name="width" />
             </div>
             <div className="container">
-              <label className="item">Enter a height</label>
+              <label className="item">Enter a height (em)</label>
               <input className="itemInput" ref={register} name="height" />
             </div>
             <button className="button item">
@@ -54,7 +54,9 @@ function App() {
             height: boxHeight + 'em',
             width: boxWidth + 'em',
           }}
-        ></div>
+        >
+          <p>{textColor}</p>
+        </div>
       </header>
     </div>
   );

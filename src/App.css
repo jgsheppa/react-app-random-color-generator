@@ -56,24 +56,15 @@
 .button {
   display: flex;
   flex-direction: column;
-  background-color: #fafab3;
+  background-color: #fbcf61;
+  color: black;
   font-size: 24px;
   font-weight: bold;
   border: solid;
-  border-color: grey;
   border-radius: 50%;
-  border-width: 0.3em;
+  border-width: 0.1em;
   align-items: center;
   margin: 10px 10px 10px 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .background-box {
@@ -83,8 +74,16 @@
 }
 
 .colorBox {
-  transition: background-color 2s, height 2s, width 2s;
+  display: flex;
+  transition: background-color 0.8s, height 0.8s, width 0.8s;
   transition-timing-function: ease;
   margin: 2em;
   border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorBox p {
+  color: black;
+  font-weight: bold;
 }
