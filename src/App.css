@@ -86,4 +86,8 @@
 .colorBox p {
   color: black;
   font-weight: bold;
+  border: solid;
+  border-color: black;
+  border-radius: 8px;
+  padding: 8px;
 }
