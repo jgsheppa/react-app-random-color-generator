@@ -6,22 +6,18 @@ import randomColor from 'randomcolor';
 function App() {
   const [textColor, setTextColor] = React.useState('#FFFFFF');
   const { register, handleSubmit } = useForm();
-  const [boxWidth, setBoxWidth] = React.useState('100px');
-  const [boxHeight, setBoxHeight] = React.useState('100px');
+  const [boxWidth, setBoxWidth] = React.useState('10');
+  const [boxHeight, setBoxHeight] = React.useState('10');
 
   const onSubmit = (data) => {
-    console.log(data);
     setTextColor(
       randomColor({
         hue: data.hue,
         luminosity: data.luminosity,
       }),
     );
-    console.log(setTextColor(randomColor(data)));
     setBoxWidth(data.width);
-    console.log(setBoxWidth(data));
     setBoxHeight(data.height);
-    console.log(setBoxHeight(data));
   };
 
   return (
@@ -45,7 +41,9 @@ function App() {
               <label className="item">Enter a height</label>
               <input className="itemInput" ref={register} name="height" />
             </div>
-            <button className="button item">Submit Color</button>
+            <button className="button item">
+              <p>Submit</p>
+            </button>
           </div>
         </form>
 
@@ -56,9 +54,7 @@ function App() {
             height: boxHeight + 'em',
             width: boxWidth + 'em',
           }}
-        >
-          <p className="randomColorText">This is your random color</p>
-        </div>
+        ></div>
       </header>
     </div>
   );

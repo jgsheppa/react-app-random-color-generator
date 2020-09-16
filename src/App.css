@@ -39,7 +39,6 @@
   flex-direction: column;
 }
 .item {
-  margin: 12px;
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
@@ -47,7 +46,7 @@
 }
 
 .itemInput {
-  margin: 12px;
+  margin: 0 10px;
   padding: 16px;
   font-size: 16px;
   font-weight: bold;
@@ -60,9 +59,12 @@
   background-color: #fafab3;
   font-size: 24px;
   font-weight: bold;
-  border-color: turquoise;
-  border-radius: 8px;
-  border-width: 4px;
+  border: solid;
+  border-color: grey;
+  border-radius: 50%;
+  border-width: 0.3em;
+  align-items: center;
+  margin: 10px 10px 10px 0;
 }
 
 @keyframes App-logo-spin {
@@ -81,7 +83,8 @@
 }
 
 .colorBox {
-  transition: background-color 2s ease;
+  transition: background-color 2s, height 2s, width 2s;
+  transition-timing-function: ease;
   margin: 2em;
   border-radius: 8px;
 }
