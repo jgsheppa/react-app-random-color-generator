@@ -26,7 +26,7 @@ function App() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flexbox background-box">
             <div className="container">
-              <label className="item">Enter a primary color</label>
+              <label className="item">Enter a color</label>
               <input className="itemInput" ref={register} name="hue" />
             </div>
             <div className="container">
