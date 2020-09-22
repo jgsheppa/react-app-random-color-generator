@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import randomColor from 'randomcolor';
 
 function App() {
-  const [textColor, setTextColor] = React.useState('#FFFFFF');
+  const [textColor, setTextColor] = React.useState('#ffffff');
   const { register, handleSubmit } = useForm();
   const [boxWidth, setBoxWidth] = React.useState('10');
   const [boxHeight, setBoxHeight] = React.useState('10');
