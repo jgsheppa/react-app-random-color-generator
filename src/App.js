@@ -27,19 +27,39 @@ function App() {
           <div className="flexbox background-box">
             <div className="container">
               <label className="item">Enter a color</label>
-              <input className="itemInput" ref={register} name="hue" />
+              <input
+                className="itemInput"
+                ref={register}
+                name="hue"
+                placeholder="blue"
+              />
             </div>
             <div className="container">
               <label className="item">Light or dark?</label>
-              <input className="itemInput" ref={register} name="luminosity" />
+              <input
+                className="itemInput"
+                ref={register}
+                name="luminosity"
+                placeholder="light"
+              />
             </div>
             <div className="container">
               <label className="item">Enter a width (em)</label>
-              <input className="itemInput" ref={register} name="width" />
+              <input
+                className="itemInput"
+                ref={register}
+                name="width"
+                placeholder="6"
+              />
             </div>
             <div className="container">
               <label className="item">Enter a height (em)</label>
-              <input className="itemInput" ref={register} name="height" />
+              <input
+                className="itemInput"
+                ref={register}
+                name="height"
+                placeholder="6"
+              />
             </div>
             <button className="button item">
               <p>Submit</p>
